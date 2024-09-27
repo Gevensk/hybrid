@@ -22,7 +22,15 @@ const routes: Routes = [
   {
     path: 'ourschedule',
     loadChildren: () => import('./ourschedule/ourschedule.module').then(m => m.OurschedulePageModule)
+  },  {
+    path: 'schedule-page',
+    loadChildren: () => import('./schedule-page/schedule-page.module').then( m => m.SchedulePagePageModule)
   },
+  {
+    path: 'schedule-detail',
+    loadChildren: () => import('./schedule-detail/schedule-detail.module').then( m => m.ScheduleDetailPageModule)
+  },
+
 ];
 
 @NgModule({
