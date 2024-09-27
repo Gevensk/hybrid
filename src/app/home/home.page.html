@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div>
+      <ion-button fill="false" routerLink="/whatweplay">
+        <ion-icon name="game-controller-outline" size="large"></ion-icon>
+  
+      </ion-button> <br>What We Play
+    </div>
+
+<div>
+  <ion-button fill="false" routerLink="/whoweare">
+    <ion-icon name="people-outline" size="large"></ion-icon>
+
+  </ion-button> <br>Who We Are
+</div>
+
+<div>
+  <ion-button fill="false" routerLink="/ourschedule">
+    <ion-icon name="calendar-outline" size="large"></ion-icon>
+
+  </ion-button> <br> Our Schedule
+</div>
+
+  </div>
+</ion-content>
