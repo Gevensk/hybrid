@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./whoweare.page.scss'],
 })
 export class WhowearePage implements OnInit {
+  like = 0
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addLike(){
+    this.like ++
   }
 
 }

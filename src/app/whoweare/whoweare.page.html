@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot = "start">
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Who We Are?</ion-title>
@@ -8,5 +8,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <div id="container">
+    <ion-list>
+      <ion-item class="ion-margin">
+        <ion-img src="https://comarketing-news.fr/wp-content/uploads/eSport-un-secteur-en-plein-developpement.jpg"
+          alt="Tidak ada gambar"></ion-img>
+      </ion-item>
+      <ion-item class="ion-margin-start">
+        <ion-label>
+          <h1>E-Sport</h1>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-text class="ion-margin">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae posuere arcu. Fusce convallis lectus id
+          dictum egestas. Suspendisse potenti. Nam vestibulum pellentesque nulla in aliquet. Praesent eget arcu libero.
+          Praesent imperdiet, diam sit amet pulvinar pharetra, tortor ante ullamcorper quam, eu porta sapien lorem in
+          massa. Donec eu quam id dolor dapibus sodales id condimentum urna. Aliquam erat volutpat. Mauris eget orci
+          quis ligula rutrum tincidunt. Duis id turpis eget libero laoreet ullamcorper. Etiam congue dui quis velit
+          fermentum, nec rutrum est condimentum.
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-button size="small" (click)="addLike()" slot="end">
+          <ion-icon name="thumbs-up-outline"></ion-icon>
+          <ion-text>{{like}}</ion-text>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
