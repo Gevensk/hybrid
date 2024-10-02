@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ScheduleDetailPageRoutingModule } from './schedule-detail-routing.module';
+import { ScheduledetailPageRoutingModule } from './scheduledetail-routing.module';
 
-import { ScheduleDetailPage } from './schedule-detail.page';
+import { ScheduledetailPage } from './scheduledetail.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ScheduleDetailPageRoutingModule
+    ScheduledetailPageRoutingModule
   ],
-  declarations: [ScheduleDetailPage]
+  declarations: [ScheduledetailPage]
 })
-export class ScheduleDetailPageModule {}
+export class ScheduledetailPageModule {}
