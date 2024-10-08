@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'achievements/:index',
     loadChildren: () => import('./achievements/achievements.module').then(m => m.AchievementsPageModule)
+  },  {
+    path: 'teamdetail',
+    loadChildren: () => import('./teamdetail/teamdetail.module').then( m => m.TeamdetailPageModule)
   }
+
 ];
 
 @NgModule({
