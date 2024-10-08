@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot = "start">
+      <ion-back-button defaultHref = "/whatweplay"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Achievements</ion-title>
+    <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <img alt="Silhouette of mountains" src="{{achievements[index].url}}" />
+    <ion-item class = "ion-padding">
+      <ion-select label="Year" label-placement="floating">
+        <ion-select-option value="2022">2022</ion-select-option>
+        <ion-select-option value="2023">2023</ion-select-option>
+        <ion-select-option value="2024">2024</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-title>{{achievements[index].game}}</ion-title>
+    <div class = "ion-padding">
+      <ion-text *ngFor="let ach of achievements[index].desc">
+        {{ach}}<br/>
+      </ion-text>
+    </div>
+  </div>
+</ion-content>

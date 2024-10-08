@@ -9,10 +9,6 @@ const routes: Routes = [
     component: WhatweplayPage
   },
   {
-    path: 'achievements',
-    loadChildren: () => import('./achievements/achievements.module').then( m => m.AchievementsPageModule)
-  },
-  {
     path: 'teams',
     loadChildren: () => import('./teams/teams.module').then( m => m.TeamsPageModule)
   }
