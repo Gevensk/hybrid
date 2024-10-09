@@ -4,15 +4,15 @@
       <ion-back-button defaultHref = "/whatweplay"></ion-back-button>
     </ion-buttons>
     <ion-title>Teams</ion-title>
+        <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-img src="teams[index.url]"></ion-img> 
+    <ion-img src="teams[index].url"></ion-img> 
   </div>
   <ion-list>
-
     <ion-item [routerLink]="['/teamdetail']">
       <ion-label>
         {{ teams[index].name }} 

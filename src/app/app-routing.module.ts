@@ -30,7 +30,12 @@ const routes: Routes = [
   {
     path: 'achievements/:index',
     loadChildren: () => import('./achievements/achievements.module').then(m => m.AchievementsPageModule)
-  },  {
+  },
+  {
+    path: 'teams/:index',
+    loadChildren: () => import('./teams/teams.module').then(m => m.TeamsPageModule)
+  },
+  {
     path: 'teamdetail',
     loadChildren: () => import('./teamdetail/teamdetail.module').then( m => m.TeamdetailPageModule)
   }
