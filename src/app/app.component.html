@@ -1,39 +1,38 @@
 <ion-app>
-  <ion-router-outlet id = "main-content"></ion-router-outlet>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
   <ion-menu auto-hide="true" contentId="main-content">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="dark">
         <ion-title>Menu List</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
+    <ion-content class="ion-padding" color="dark">
       <ion-list>
         <ion-menu-toggle>
-          <ion-item routerLink="/home">
+          <ion-item routerLink="/home" lines="none">
             <ion-icon name="home" slot="start"></ion-icon>
             <ion-label>Home</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
-          <ion-item routerLink="/whatweplay">
+          <ion-item routerLink="/whatweplay" lines="none">
             <ion-icon name="game-controller" slot="start"></ion-icon>
             <ion-label>What we play?</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
-          <ion-item routerLink="/whoweare">
+          <ion-item routerLink="/whoweare" lines="none">
             <ion-icon name="people-circle-outline" slot="start"></ion-icon>
             <ion-label>Who we are?</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
-          <ion-item routerLink="/ourschedule">
-            <ion-icon name="calendar" slot = "start"></ion-icon>
+          <ion-item routerLink="/ourschedule" lines="none">
+            <ion-icon name="calendar" slot="start"></ion-icon>
             <ion-label>Our Schedule</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
-
 </ion-app>

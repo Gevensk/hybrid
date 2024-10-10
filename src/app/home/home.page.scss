@@ -25,3 +25,43 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content{
+   --background: linear-gradient(to right, #ed213a, #93291e);
+}
+
+ion-card {
+  
+  display: inline-block;
+  width: 300px; /* Atur lebar card lebih besar */
+  height: 400px; /* Atur tinggi card lebih besar */
+  margin: 10px; /* Menambah jarak antar card */
+  border-radius: 15px; /* Membuat sudut card lebih bulat */ flex-direction: column;
+  justify-content: center; /* Menyusun elemen secara vertikal ke tengah */
+  align-items: center; /* Menyusun elemen secara horizontal ke tengah */
+  box-shadow: 0 4px 10px rgba(87, 83, 83, 0.15); /* Shadow untuk card */
+}
+
+ion-card-header {
+  padding: 20px; /* Menambah padding pada bagian header card */
+}
+
+ion-card-title {
+  font-size: 24px; /* Ukuran judul lebih besar */
+}
+
+ion-card-content {
+  padding: 20px; /* Menambah padding pada isi card */
+  font-size: 18px; /* Ukuran font lebih besar */
+}
+
+
+
+
+@media (max-width: 768px) {
+  ion-card {
+    width: 250px;
+    height: 350px;
+  }
+}
+
