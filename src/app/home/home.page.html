@@ -8,30 +8,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" scrollX="true" style="height: 500px;">
-  <div id="container" style="white-space: nowrap;" >
-    <ion-card routerLink="/whatweplay">
-      <div>
-        <ion-button fill="clear" >
-          <ion-icon name="game-controller-outline" size="large"></ion-icon>
-        </ion-button> <br>What We Play
-      </div>
+<ion-content [fullscreen]="true" scrollX="true" style="height: 700px;">
+
+  <div id="container"  >
+    <ion-card-header class=" card-background4">
+    </ion-card-header>
+  
+    <h1>FEATURES</h1>
+
+    <ion-card routerLink="/whatweplay" class="card-background1">
     </ion-card>
 
-    <ion-card routerLink="/whoweare">
-      <div>
-        <ion-button fill="clear" >
-          <ion-icon name="people-outline" size="large"></ion-icon>
-        </ion-button> <br>Who We Are
-      </div>
+    <ion-card routerLink="/whoweare" class="card-background2">
     </ion-card>
 
-    <ion-card routerLink="/ourschedule">
-      <div>
-        <ion-button fill="clear" >
-          <ion-icon name="calendar-outline" size="large"></ion-icon>
-        </ion-button> <br>Our Schedule
-      </div>
+    <ion-card routerLink="/ourschedule" class="card-background3">
     </ion-card>
   </div>
 </ion-content>

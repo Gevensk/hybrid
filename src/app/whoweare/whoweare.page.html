@@ -10,18 +10,20 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-list>
-      <ion-item class="ion-margin">
+    <ion-list fill="clear">
+      <ion-item lines="none" fill="clear">
         <ion-img src="https://comarketing-news.fr/wp-content/uploads/eSport-un-secteur-en-plein-developpement.jpg"
-          alt="Tidak ada gambar"></ion-img>
+          alt="Gambar E-Sport" fill="clear"></ion-img>
       </ion-item>
-      <ion-item class="ion-margin-start">
+
+      <ion-item lines="none" fill="clear"> 
         <ion-label>
-          <h1>E-Sport</h1>
+          <h1 class="title">E-Sport</h1>
         </ion-label>
       </ion-item>
-      <ion-item>
-        <ion-text class="ion-margin">
+
+      <ion-item lines="none" fill="clear">
+        <ion-text fill="clear"class="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae posuere arcu. Fusce convallis lectus id
           dictum egestas. Suspendisse potenti. Nam vestibulum pellentesque nulla in aliquet. Praesent eget arcu libero.
           Praesent imperdiet, diam sit amet pulvinar pharetra, tortor ante ullamcorper quam, eu porta sapien lorem in
@@ -30,11 +32,13 @@
           fermentum, nec rutrum est condimentum.
         </ion-text>
       </ion-item>
-      <ion-item>
-        <ion-button size="small" (click)="addLike()" slot="end">
-          <ion-icon name="thumbs-up-outline"></ion-icon>
+
+      <ion-item lines="none">
+        <ion-button size="default" (click)="addLike()" shape="round" >
+          <ion-icon slot="start" name="thumbs-up-outline"></ion-icon>
           <ion-text>{{like}}</ion-text>
         </ion-button>
+        
       </ion-item>
     </ion-list>
   </div>

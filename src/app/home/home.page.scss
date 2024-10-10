@@ -6,6 +6,16 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+
+    @media (min-width: 768px) {  /* Tablet ke atas */
+      padding-top: 100px; 
+      padding-bottom: 25px;
+    }
+  
+    @media (min-width: 1024px) { /* Desktop ke atas */
+      padding-top: 400px; 
+      padding-bottom: 25px;
+    }
 }
 
 #container strong {
@@ -27,41 +37,83 @@
 }
 
 ion-content{
-   --background: linear-gradient(to right, #ed213a, #93291e);
+   --background: linear-gradient(to right, #1c0104, #93291e);
 }
 
 ion-card {
-  
   display: inline-block;
-  width: 300px; /* Atur lebar card lebih besar */
-  height: 400px; /* Atur tinggi card lebih besar */
-  margin: 10px; /* Menambah jarak antar card */
-  border-radius: 15px; /* Membuat sudut card lebih bulat */ flex-direction: column;
-  justify-content: center; /* Menyusun elemen secara vertikal ke tengah */
-  align-items: center; /* Menyusun elemen secara horizontal ke tengah */
-  box-shadow: 0 4px 10px rgba(87, 83, 83, 0.15); /* Shadow untuk card */
+  width: 300px;
+  height: 400px; 
+  margin: 10px; 
+  border-radius: 15px; 
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 4px 10px rgba(87, 83, 83, 0.15); 
 }
 
 ion-card-header {
-  padding: 20px; /* Menambah padding pada bagian header card */
+  padding: 20px; 
 }
 
 ion-card-title {
-  font-size: 24px; /* Ukuran judul lebih besar */
+  font-size: 24px;
 }
 
 ion-card-content {
-  padding: 20px; /* Menambah padding pada isi card */
-  font-size: 18px; /* Ukuran font lebih besar */
+  padding: 20px; 
+  font-size: 18px; 
 }
-
-
-
 
 @media (max-width: 768px) {
   ion-card {
     width: 250px;
     height: 350px;
   }
+}
+
+.card-background1 {
+  background-image: url('/assets/images/2.png');
+  background-size: cover; 
+  background-position: center; 
+  min-height: 200px; 
+  color: white; 
+}
+
+.card-background2 {
+  background-image: url('/assets/images/3.png');
+  background-size: cover; 
+  background-position: center; 
+  min-height: 200px; 
+  color: white; 
+}
+
+.card-background3 {
+  background-image: url('/assets/images/4.png');
+  background-size: cover; 
+  background-position: center; 
+  min-height: 200px;
+  color: white; 
+}
+
+.card-background4 {
+  margin: 10px 0 0 0;
+  width: 100%; 
+  height: auto; 
+  min-height: 500px; 
+  margin-top: 56px; 
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/images/event.png');
+  background-size: auto;
+  background-position: center; 
+}
+
+h1{
+  padding: 30px;
+  color: #fff;
+  font-family:'Staatliches';
+  font-weight: bold;
 }
 
