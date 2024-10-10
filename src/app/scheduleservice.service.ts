@@ -90,105 +90,97 @@ export class ScheduleserviceService {
     {
       game: "Valorant",
       desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
     },
     {
       game: "PUBG Mobile",
       desc: ["1. Champions of PUBG Mobile Global Championship (2023) - Team D",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://i0.wp.com/gamingonphone.com/wp-content/uploads/2019/08/Tencent-Sees-Share-Rise-after-Games-Accepted-03-PUBG-Mobile-1024x465.jpg"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://i0.wp.com/gamingonphone.com/wp-content/uploads/2019/08/Tencent-Sees-Share-Rise-after-Games-Accepted-03-PUBG-Mobile-1024x465.jpg"
     },
     {
       game: "Mobile Legends",
       desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://ggengine.com/media/uploads/2017/11/mobile-legends-bang-bang.png"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://ggengine.com/media/uploads/2017/11/mobile-legends-bang-bang.png"
     },
     {
       game: "Dota 2",
       desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://assets.vg247.com/current/2014/08/dota-2-official.jpg"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://assets.vg247.com/current/2014/08/dota-2-official.jpg"
     },
     {
       game: "Leauge of Legends",
       desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://wallpaperaccess.com/full/2379005.jpg"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://wallpaperaccess.com/full/2379005.jpg"
     },
     {
       game: "Call of Duty",
       desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://oyster.ignimgs.com/mediawiki/apis.ign.com/call-of-duty-mw2/e/e5/Modern_Warfare_2_Gameplay.jpg"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/call-of-duty-mw2/e/e5/Modern_Warfare_2_Gameplay.jpg"
     },
     {
       game: "Fortnite",
       desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-              "2. Best Defensive Team Award (2024) - Team A",
-              "3. MVP of the Season (2023) - Team B"
-            ],
-      url:  "https://tryhardguides.com/wp-content/uploads/2022/12/featured-fortnite-chapter-4-coordinate-codes-1536x864.jpg"
+        "2. Best Defensive Team Award (2024) - Team A",
+        "3. MVP of the Season (2023) - Team B"
+      ],
+      url: "https://tryhardguides.com/wp-content/uploads/2022/12/featured-fortnite-chapter-4-coordinate-codes-1536x864.jpg"
     }
   ]
 
-  teams=[
+  teams = [
     {
       game: "Valorant",
-      name: "Team A",
-      members: ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: ["Void A", "Void U-15"],
+      url: "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
     },
     {
       game: "PUBG Mobile",
-      name: "Team B",
-      members: ["Player 6", "Player 7", "Player 8", "Player 9", "Player 10"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: ["NOVA A", "NOVA B", "NOVA U-15"],
+      url: "https://i0.wp.com/gamingonphone.com/wp-content/uploads/2019/08/Tencent-Sees-Share-Rise-after-Games-Accepted-03-PUBG-Mobile-1024x465.jpg"
     },
     {
       game: "Mobile Legends",
-      name: "Team C",
-      members: ["Player 11", "Player 12", "Player 13", "Player 14", "Player 15"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: ["Nebula A", "Nebula B"],
+      url: "https://ggengine.com/media/uploads/2017/11/mobile-legends-bang-bang.png"
     },
     {
       game: "Dota 2",
-      name: "Team D",
-      members: ["Player 16", "Player 17", "Player 18", "Player 19", "Player 20"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: ["Predators A", "Predators B"],
+      url: "https://assets.vg247.com/current/2014/08/dota-2-official.jpg"
     },
     {
       game: "Leauge of Legends",
-      name: "Team D",
-      members: ["Player 16", "Player 17", "Player 18", "Player 19", "Player 20"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: ["Red Devils A",],
+      url: "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
     },
     {
       game: "Call of Duty",
-      name: "Team D",
-      members: ["Player 16", "Player 17", "Player 18", "Player 19", "Player 20"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: [],
+      url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/call-of-duty-mw2/e/e5/Modern_Warfare_2_Gameplay.jpg"
     },
     {
       game: "Fortnite",
-      name: "Team D",
-      members: ["Player 16", "Player 17", "Player 18", "Player 19", "Player 20"],
-      url:  "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+      name: [],
+      url: "https://tryhardguides.com/wp-content/uploads/2022/12/featured-fortnite-chapter-4-coordinate-codes-1536x864.jpg"
     }
-
   ]
 
   constructor() { }
