@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+ion-content {
+    --background: rgb(2,1,17);
+
+    ion-card {
+        margin-top: 40px;
+        border-radius: 28px;
+        text-align: left;
+        --color: #fff;
+        
+
+        ion-card-header{
+            ion-card-title{
+                --color:#fff;
+                font-weight: bold;
+                font-family:'Staatliches';
+                letter-spacing:1px ;
+            }
+        }
+
+        ion-card-content {
+            ion-card-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+   
+            }
+
+            ion-button {
+                --color: #fff;
+                --box-shadow: none;
+            }
+        }
+    }
+}
+
+// Ganti nama class menjadi card1
+.card1 {
+    background: rgb(2,0,0);
+    background: linear-gradient(to right, #ed213a, #93291e);
+    ion-button {
+        --color: #fff;
+    }
+}
+
+ion-button{
+    font-family:'Staatliches';
+    letter-spacing:1px ;
+}

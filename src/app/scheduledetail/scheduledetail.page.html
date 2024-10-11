@@ -21,7 +21,7 @@
       </ion-card-header>
       <ion-card-content>{{schedules[index].desc}}</ion-card-content>
       <ion-item>
-        <ion-button size="small" slot="end" id="btnNotify">
+        <ion-button size="small" slot="end" id="btnNotify" shape="round" expand="round" fill="clear">
           <ion-icon name="notifications-outline"></ion-icon>
           <ion-text class="ion-margin-start">Notify Me</ion-text>
           <ion-alert trigger="btnNotify" message="Notification created" [buttons]="alertButtons"></ion-alert>

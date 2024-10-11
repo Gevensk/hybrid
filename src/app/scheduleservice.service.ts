@@ -148,7 +148,7 @@ export class ScheduleserviceService {
   teams = [
     {
       game: "Valorant",
-      name: ["Void A", "Void U-15"],
+      name: ["Sentinels", "Void U-15"],
       url: "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
     },
     {
@@ -158,7 +158,7 @@ export class ScheduleserviceService {
     },
     {
       game: "Mobile Legends",
-      name: ["Nebula A", "Nebula B"],
+      name: ["RRQ Hoshi"],
       url: "https://ggengine.com/media/uploads/2017/11/mobile-legends-bang-bang.png"
     },
     {
@@ -181,6 +181,43 @@ export class ScheduleserviceService {
       name: [],
       url: "https://tryhardguides.com/wp-content/uploads/2022/12/featured-fortnite-chapter-4-coordinate-codes-1536x864.jpg"
     }
+  ]
+
+  team_members = [
+    {
+      idgame: 0,
+      idteam: 0,
+      members: [
+        {
+          nickname: "JohnQT",
+          role: "In-Game Leader",
+          url: "https://valorantnews.jp/wp-content/uploads/2024/03/53590103570_2f2780b5b2_k-1280x853.jpg"
+        },
+        {
+          nickname: "TenZ",
+          role: "Duelist",
+          url: "https://cdn.oneesports.gg/cdn-data/2022/05/Valorant_TenZ_Champions_2021_V2.jpg"
+        },
+        {
+          nickname: "Sacy",
+          role: "Initiator",
+          url: "https://theclutch.com.br/wp-content/uploads/2020/12/Sacy-Circuito-Desafiante-BBL-Semifinal.jpg"
+        }
+      ],
+      url: "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
+    },
+    {
+      idgame: 2,
+      idteam: 0,
+      members: [
+        {
+          nickname: "Skylar",
+          role: "Gold Laner",
+          url: "https://img.esportsku.com/wp-content/uploads/2023/07/RRQ-Skylar.jpg"
+        }
+      ],
+      url: "https://i0.wp.com/gamingonphone.com/wp-content/uploads/2019/08/Tencent-Sees-Share-Rise-after-Games-Accepted-03-PUBG-Mobile-1024x465.jpg"
+    },
   ]
 
   constructor() { }

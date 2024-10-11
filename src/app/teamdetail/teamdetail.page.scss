@@ -1,0 +1,41 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  ion-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  #myAvatar {
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  p {
+    margin: 5px 0 0;
+    color: #666;
+  }

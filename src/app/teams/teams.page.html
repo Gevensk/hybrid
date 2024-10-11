@@ -12,8 +12,8 @@
   <div id="container">
     <ion-img src="{{teams[index].url}}"></ion-img>
   </div>
-  <ion-list *ngFor="let team of teams[index].name; let idx = index">
-    <ion-item [routerLink]="['/teamdetail/{{index}}/{{idx}}']">
+  <ion-list *ngFor="let team of teams[index].name; let i = index">
+    <ion-item [routerLink]="['/teamdetail', index, i]">
       <ion-label>
         {{team}}
       </ion-label>
