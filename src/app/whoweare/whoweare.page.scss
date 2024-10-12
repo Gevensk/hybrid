@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 #container {
-  padding: 20px; 
+  padding: 20px;
   max-width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 ion-img {
-    background: linear-gradient(to right, #ed213a, #93291e);
+  background: linear-gradient(to right, #ed213a, #93291e);
 
-  width: 100%; 
+  width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 8px; 
+  border-radius: 8px;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .title {
@@ -27,7 +27,7 @@ ion-img {
 }
 
 .description {
-    font-weight: 100;
+  font-weight: 100;
   font-size: 16px;
   color: #fff;
   line-height: 1.6;
@@ -37,23 +37,23 @@ ion-img {
 }
 
 ion-content {
-    --background: linear-gradient(to right, #000000, #000000); 
-    height: 100%; 
-  }
-  
+  --background: linear-gradient(to right, #000000, #000000);
+  height: 100%;
+}
+
 
 ion-list {
-    background: linear-gradient(to right, #ed213a, #93291e); /* Gradient untuk ion-list */
-    --padding-start: 0px;
-    --padding-end: 0px;
-    margin: 0 auto;
-    padding: 0;
+  background: linear-gradient(to right, #ed213a, #93291e);
+  --padding-start: 0px;
+  --padding-end: 0px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 ion-item {
---background: linear-gradient(to right, #ed213a, #93291e);
-  --inner-padding-start: 20px; 
-  --inner-padding-end: 20px; 
+  --background: linear-gradient(to right, #ed213a, #93291e);
+  --inner-padding-start: 20px;
+  --inner-padding-end: 20px;
   padding: 10px 0;
 }
 
@@ -61,11 +61,11 @@ ion-button {
   --border-radius: 25px;
   --background: #fd0303;
   padding: 20px 10px;
- 
+
 }
 
 ion-button:hover {
-  --background: #040206; /* Warna tombol saat hover */
+  --background: #040206;
 }
 
 ion-button ion-icon {

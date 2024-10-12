@@ -10,7 +10,7 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-card>
+    <ion-card class="card1">
       <img alt="Silhouette of mountains" src="{{schedules[index].url}}" />
       <ion-card-header>
         <ion-card-title>
@@ -20,13 +20,13 @@
         <ion-card-subtitle>{{schedules[index].team}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>{{schedules[index].desc}}</ion-card-content>
-      <ion-item>
+      <ion-card-content>
         <ion-button size="small" slot="end" id="btnNotify" shape="round" expand="round" fill="clear">
           <ion-icon name="notifications-outline"></ion-icon>
           <ion-text class="ion-margin-start">Notify Me</ion-text>
           <ion-alert trigger="btnNotify" message="Notification created" [buttons]="alertButtons"></ion-alert>
         </ion-button>
-      </ion-item>
+      </ion-card-content>
     </ion-card>
   </div>
 </ion-content>

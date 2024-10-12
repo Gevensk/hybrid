@@ -34,7 +34,6 @@ ion-content {
     }
 }
 
-// Ganti nama class menjadi card1
 .card1 {
     background: rgb(2,0,0);
     background: linear-gradient(to right, #ed213a, #93291e);
@@ -47,3 +46,7 @@ ion-button{
     font-family:'Staatliches';
     letter-spacing:1px ;
 }
+ion-card-subtitle {
+    color: #fff;
+}
+

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+ion-content {
+    --background: rgb(2, 1, 17);
+}
+
+#container {
+    text-align: center;
+    margin-top: 50px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    ion-title {
+        font-family: 'Staatliches';
+        font-size: 28px;
+        color: #fff;
+        margin-top: 20px;
+    }
+
+    ion-text {
+        color: #fff;
+        font-family: 'Staatliches';
+        letter-spacing: 1px;
+    }
+
+    ion-select {
+        background: #1c1c1c;
+        --color: #fff;
+        --placeholder-color: #b0b0b0;
+        --placeholder-opacity: 1;
+        --padding-start: 15px;
+        font-family: 'Staatliches';
+        letter-spacing: 1px;
+        border-radius: 10px;
+
+        ion-select-option {
+            --color: #ffffff;
+            --background: #fff;
+            font-family: 'Staatliches';
+        }
+
+        .select-interface-option {
+            padding: 10px 20px;
+        }
+
+        .select-text {
+            color: #ed213a;
+            font-weight: bold;
+        }
+    }
+
+    ion-select[placeholder]::part(placeholder) {
+        color: #b0b0b0;
+        font-family: 'Staatliches';
+    }
+
+    ion-item ion-select {
+        border: 1px solid #fff;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    ion-item {
+        --background: #000000;
+        --color: #fff;
+        border-radius: 8px;
+    }
+}

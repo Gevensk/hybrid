@@ -1,41 +1,77 @@
-#container {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-  }
-  
-  ion-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    margin: 10px 0;
-  }
-  
-  .card-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  #myAvatar {
-    margin-right: 15px;
-    width: 60px;
-    height: 60px;
-  }
-  
-  ion-card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  h2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  p {
-    margin: 5px 0 0;
-    color: #666;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+ion-content {
+    --background: rgb(0, 0, 0); // penting
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+
+        ion-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        ion-title {
+            font-family: 'Staatliches';
+            font-size: 28px;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        ion-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            background: linear-gradient(to right, #ed213a, #93291e);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            --color: #fff;
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        ion-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            color: #fff;
+        }
+
+        p {
+            margin: 5px 0 0;
+            color: #ccc;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    ion-title {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}

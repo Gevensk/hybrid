@@ -11,16 +11,17 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-card *ngFor="let schedule of schedules; let i = index" routerLink="/scheduledetail/{{i}}">
+    <ion-card *ngFor="let schedule of schedules; let i = index">
       <ion-card-header>
         <img alt="Silhouette of mountains" src="{{schedule.url}}" />
-        <ion-card-title>
-          <ion-label>{{schedule.name}}</ion-label>
-        </ion-card-title>
+        <ion-card-title>{{schedule.name}}</ion-card-title>
         <ion-card-subtitle>{{schedule.game}}</ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content>{{schedule.date}}</ion-card-content>
-      <ion-card-content>{{schedule.team}}</ion-card-content>
+      <ion-card-content>
+        <ion-label>{{schedule.date}}</ion-label><br>
+        <ion-label><b>{{schedule.team}}</b></ion-label><br><br>
+        <a routerLink="/scheduledetail/{{i}}">View details</a>
+      </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
