@@ -89,57 +89,56 @@ export class ScheduleserviceService {
   achievements = [
     {
       game: "Valorant",
-      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Sentinels",
+        "2. Best Defensive Team Award (2024) - FatuiHarbingers",
+        "3. MVP of the Season (2023) - Sentinels"
       ],
       url: "https://wallpapers.com/images/featured/valorant-logo-x0jet8s98hbbfi62.jpg"
     },
     {
       game: "PUBG Mobile",
-      desc: ["1. Champions of PUBG Mobile Global Championship (2023) - Team D",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. Champions of PUBG Mobile Global Championship (2023) - Nova",
+        "2. Champions of PMPL Season 5 (2024) - Shadiqa"
       ],
       url: "https://i0.wp.com/gamingonphone.com/wp-content/uploads/2019/08/Tencent-Sees-Share-Rise-after-Games-Accepted-03-PUBG-Mobile-1024x465.jpg"
     },
     {
       game: "Mobile Legends",
-      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. MVP in MPL Indonesia Season 11 (2023) - RRQ",
+        "2. Champions of M1 World Championship (2019) - EVOS",
+        "3. MPL-ID Season 7 (2021) - EVOS"
       ],
       url: "https://ggengine.com/media/uploads/2017/11/mobile-legends-bang-bang.png"
     },
     {
       game: "Dota 2",
-      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. Top 3 in DOta 2 Asia Championship (2018) - Cosmic Titans",
+        "2. Champion of The International (2018) - Cosmic Titans",
+        "3. Winner of EPICENTER Major (2019) - Astral Predators",
+        "4. Winner of The International (2020) - Cosmic Titans"
       ],
       url: "https://assets.vg247.com/current/2014/08/dota-2-official.jpg"
     },
     {
       game: "Leauge of Legends",
-      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. MVP of the 2023 World Championship (2023) - Neon Vortex",
+        "2. Best Defensive Team Award (2021) - Neon Vortex",
+        "3. Finalist of the 2024 World Championship (2023) - ExoForce Legion"
       ],
       url: "https://wallpaperaccess.com/full/2379005.jpg"
     },
     {
       game: "Call of Duty",
-      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. Champions of the 2023 Regional League (2023) - Senju",
+        "2. Best Defensive Team Award (2024) - Senju"
       ],
       url: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/call-of-duty-mw2/e/e5/Modern_Warfare_2_Gameplay.jpg"
     },
     {
       game: "Fortnite",
-      desc: ["1. Champions of the Regional Valorant Showdown (2023) - Team A",
-        "2. Best Defensive Team Award (2024) - Team A",
-        "3. MVP of the Season (2023) - Team B"
+      desc: ["1. Champions of the Fortnite World Cup Duos Finals (2022) - Galaxy",
+        "2. Best Fortnite E-Sports Team Awards (2021) - Galaxy",
+        "3. U-15 World Finalist - StellarPhantomz" 
       ],
       url: "https://tryhardguides.com/wp-content/uploads/2022/12/featured-fortnite-chapter-4-coordinate-codes-1536x864.jpg"
     }
