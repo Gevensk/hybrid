@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -659,5 +662,28 @@ export class ScheduleserviceService {
     
   ]
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    
+   }
+
+  login(username: string, password: string): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    const body = new URLSearchParams();
+    body.set('username', username);
+    body.set('password', password);
+    const urlEncodedData = body.toString();
+    return this.http.post("https://ubaya.xyz/hybrid/160422077/login_member.php", urlEncodedData, { headers });
+  }
+
+  register(fname:string, lname:string, username: string, password: string): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    const body = new URLSearchParams();
+    body.set('fname', fname);
+    body.set('lname', lname);
+    body.set('username', username);
+    body.set('password', password);
+    const urlEncodedData = body.toString();
+    return this.http.post("https://ubaya.xyz/hybrid/160422077/register_member.php", urlEncodedData, { headers });
+  }
+
 }

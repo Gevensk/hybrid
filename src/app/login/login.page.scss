@@ -1,0 +1,30 @@
+ion-item {
+    // background: #000;
+    --color: #fff;
+    --border-radius: 12px;
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+    border: none;
+    --background: linear-gradient(to right, #ed213a, #93291e);
+    ;
+  }
+
+  ion-button {
+    --background: #93291e;
+    --background-hover: #93291e;
+    --background-activated: #93291e;
+    --background-focused: #93291e;
+  
+    --color: #fff;
+  
+    --border-radius: 10px;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+
+  
+    margin: 10px 0;
+    padding: 10px 16px;
+  }

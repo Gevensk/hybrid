@@ -1,0 +1,38 @@
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card>
+        <ion-card-header> 
+          <ion-card-title class="ion-text-center">Registration</ion-card-title>
+        </ion-card-header> 
+        <ion-card-content> 
+          <ion-item> 
+            <ion-input [(ngModel)]="fname" label="First Name" labelPlacement="floating" /> 
+          </ion-item> 
+          <ion-item> 
+            <ion-input [(ngModel)]="lname" label="Last Name" labelPlacement="floating" /> 
+          </ion-item> 
+          <ion-item> 
+            <ion-input [(ngModel)]="username" label="Username" labelPlacement="floating" /> 
+          </ion-item> 
+          <ion-item> 
+            <ion-input [(ngModel)]="password" type="password" label="Password" labelPlacement="floating">
+              
+            </ion-input>
+            
+          </ion-item> 
+          <ion-item> 
+            <ion-input [(ngModel)]="pwconfirm" type="password" label="Confirm Password" labelPlacement="floating" /> 
+          </ion-item>
+
+          <ion-checkbox [(ngModel)]="checkButton">I agree to the terms and conditions</ion-checkbox>
+
+          <ion-button [disabled]="!checkButton" expand="block" (click)="register()">Continue</ion-button> 
+
+          
+          
+        </ion-card-content>
+      
+
+    </ion-card>
+  </div>  
+</ion-content>

@@ -11,9 +11,12 @@ ion-list {
   padding: 0;
   margin: 0;
 }
+ion-tab-bar{
+  --background: linear-gradient(to right, #ed213a, #93291e);
+}
 
 ion-item {
-  background: #000;
+  // background: #000;
   --color: #fff;
   --border-radius: 12px;
   margin: 10px 0;
@@ -45,3 +48,4 @@ ion-icon {
 .dark {
   background-color: #000;
 }
+
