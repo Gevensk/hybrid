@@ -9,12 +9,6 @@
     <ion-content class="ion-padding" class="dark">
       <ion-list>
         <ion-menu-toggle>
-          <ion-item routerLink="/home" lines="none">
-            <ion-icon name="home" slot="start"></ion-icon>
-            <ion-label>Home</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-        <ion-menu-toggle>
           <ion-item routerLink="/whatweplay" lines="none">
             <ion-icon name="game-controller" slot="start"></ion-icon>
             <ion-label>What we play?</ion-label>
@@ -32,34 +26,34 @@
             <ion-label>Our Schedule</ion-label>
           </ion-item>
         </ion-menu-toggle>
-        <ion-item >
-          <ion-button color="Danger" (click)="logout()">Logout</ion-button>
-       </ion-item> 
+        <ion-menu-toggle>
+          <ion-item (click)="logout()" lines="none">
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Log Out</ion-label>
+          </ion-item>
+        </ion-menu-toggle> 
       </ion-list>
     </ion-content>
   </ion-menu>
 
   <ion-tabs *ngIf="fullname" >
-  <ion-tab-bar slot="bottom">
-  <ion-tab-button tab="whatweplay">
-  <ion-icon name="game-controller"></ion-icon>
-  <ion-label>What We Play</ion-label>
-  </ion-tab-button>
-  
-  <ion-tab-button tab="whoweare">
-  <ion-icon name="people-circle-outline"></ion-icon>
-  <ion-label>Who We Are</ion-label>
-  </ion-tab-button>
-    
-  <ion-tab-button tab="ourschedule">
-  <ion-icon name="calendar"></ion-icon>
-  <ion-label>Our Schedule</ion-label>
-  </ion-tab-button>
-
-  </ion-tab-bar>
-</ion-tabs>
-
-  
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="whatweplay">
+        <ion-icon name="game-controller"></ion-icon>
+        <ion-label>What We Play</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button tab="whoweare">
+        <ion-icon name="people-circle-outline"></ion-icon>
+        <ion-label>Who We Are</ion-label>
+      </ion-tab-button>
+        
+      <ion-tab-button tab="ourschedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Our Schedule</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>
 
 

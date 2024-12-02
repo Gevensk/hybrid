@@ -16,19 +16,19 @@ export class TeamdetailPage implements OnInit {
   constructor(private route: ActivatedRoute, private scheduleservice: ScheduleserviceService) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      const team_members = this.scheduleservice.team_members
-      this.games = this.scheduleservice.games
-      this.indexGame = params['index'];
-      this.indexTeam = params['memberindex'];
+    // this.route.params.subscribe(params => {
+    //   const team_members = this.scheduleservice.team_members
+    //   this.games = this.scheduleservice.games
+    //   this.indexGame = params['index'];
+    //   this.indexTeam = params['memberindex'];
 
-      const selectedTeam = team_members.find(
-        team => team.idgame == this.indexGame && team.idteam == this.indexTeam
-      );
+    //   const selectedTeam = team_members.find(
+    //     team => team.idgame == this.indexGame && team.idteam == this.indexTeam
+    //   );
 
-      if (selectedTeam) {
-        this.team_members = selectedTeam.members;
-      }
-    });
+    //   if (selectedTeam) {
+    //     this.team_members = selectedTeam.members;
+    //   }
+    // });
   }
 }

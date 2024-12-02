@@ -10,23 +10,32 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-card class="card1">
-      <img alt="Silhouette of mountains" src="{{schedules[index].url}}" />
+    <ion-card>
+      <img alt="Silhouette of mountains" src="{{schedules.url}}"/>
       <ion-card-header>
         <ion-card-title>
-          <ion-label>{{schedules[index].name}} - {{schedules[index].game}}</ion-label>
+          <ion-label>{{schedules.name}}</ion-label>
         </ion-card-title>
-        <ion-card-subtitle>{{schedules[index].date}}</ion-card-subtitle>
-        <ion-card-subtitle>{{schedules[index].team}}</ion-card-subtitle>
+        <ion-card-subtitle>{{schedules.date}}</ion-card-subtitle>
+        <ion-card-subtitle>
+          <div class="ion-padding">
+            <ion-label>Teams:</ion-label>
+            <ol>
+              <li *ngFor="let team of schedules.teams">
+                {{team.team_name}}
+              </li>
+            </ol>
+          </div>
+        </ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content>{{schedules[index].desc}}</ion-card-content>
-      <ion-card-content>
+      <ion-card-content>{{schedules.description}}</ion-card-content>
+      <ion-item>
         <ion-button size="small" slot="end" id="btnNotify" shape="round" expand="round" fill="clear">
           <ion-icon name="notifications-outline"></ion-icon>
           <ion-text class="ion-margin-start">Notify Me</ion-text>
           <ion-alert trigger="btnNotify" message="Notification created" [buttons]="alertButtons"></ion-alert>
         </ion-button>
-      </ion-card-content>
+      </ion-item>
     </ion-card>
   </div>
 </ion-content>

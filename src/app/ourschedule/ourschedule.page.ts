@@ -7,12 +7,16 @@ import { ScheduleserviceService } from '../scheduleservice.service';
   styleUrls: ['./ourschedule.page.scss'],
 })
 export class OurschedulePage implements OnInit {
-  schedules:any[] = []
+  schedules: any = {};
 
   constructor(private scheduleservice: ScheduleserviceService) { }
 
   ngOnInit() {
-    this.schedules = this.scheduleservice.schedules
+    this.scheduleservice.scheduleList().subscribe(
+      (data) => {
+        console.log(data);
+        this.schedules = data
+      }
+    )
   }
-
 }

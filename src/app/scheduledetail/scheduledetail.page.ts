@@ -9,15 +9,19 @@ import { ScheduleserviceService } from '../scheduleservice.service';
 })
 export class ScheduledetailPage implements OnInit {
   index = 0
-  schedules: any[] = []
+  schedules: any = {};
   alertButtons = ['OK']
 
   constructor(private route: ActivatedRoute, private scheduleservice: ScheduleserviceService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.schedules = this.scheduleservice.schedules
       this.index = params['index'];
+      this.scheduleservice.scheduleDetail(params['index']).subscribe(
+        (data) => {
+          this.schedules = data;
+        }
+      );
     });
   }
 }
