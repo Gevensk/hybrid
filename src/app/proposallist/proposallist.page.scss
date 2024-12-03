@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+ion-content {
+   --background: #000;
+}
+
+ion-card {
+   background: linear-gradient(to right, #ed213a, #93291e);
+   margin-top: 40px;
+   border-radius: 28px;
+   text-align: left;
+
+   ion-card-title, ion-card-subtitle, ion-card-content {color: #fff;}
+}
+
+ion-card-title {
+   font-family: 'Staatliches';
+   letter-spacing: 1px;
+   font-weight: bold;
+}

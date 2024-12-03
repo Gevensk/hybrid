@@ -44,4 +44,12 @@ export class ScheduleserviceService {
   scheduleDetail(id: number): Observable<any> {
     return this.http.get(this.link + "scheduledetail.php?id=" + id);
   }
+
+  proposalList(idmember: string): Observable<any>{
+    return this.http.get(this.link + "getproposal.php?idmember=" + idmember)
+  }
+
+  getAvailableTeam(idmember: string): Observable<any>{
+    return this.http.get(this.link + "get_available_team.php?idmember=" + idmember)
+  }
 }

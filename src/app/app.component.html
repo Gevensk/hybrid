@@ -9,29 +9,23 @@
     <ion-content class="ion-padding" class="dark">
       <ion-list>
         <ion-menu-toggle>
-          <ion-item routerLink="/whatweplay" lines="none">
-            <ion-icon name="game-controller" slot="start"></ion-icon>
-            <ion-label>What we play?</ion-label>
+          <ion-item routerLink="/proposallist" lines="none">
+            <ion-icon name="create"></ion-icon>
+            <ion-label>Apply Team</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
-          <ion-item routerLink="/whoweare" lines="none">
-            <ion-icon name="people-circle-outline" slot="start"></ion-icon>
-            <ion-label>Who we are?</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-        <ion-menu-toggle>
-          <ion-item routerLink="/ourschedule" lines="none">
-            <ion-icon name="calendar" slot="start"></ion-icon>
-            <ion-label>Our Schedule</ion-label>
+          <ion-item>
+            <ion-icon name="person-circle" slot="start"></ion-icon>
+            <ion-label>Profile</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item (click)="logout()" lines="none">
-            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-icon name="log-out" slot="start"></ion-icon>
             <ion-label>Log Out</ion-label>
           </ion-item>
-        </ion-menu-toggle> 
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
@@ -42,15 +36,15 @@
         <ion-icon name="game-controller"></ion-icon>
         <ion-label>What We Play</ion-label>
       </ion-tab-button>
-      
-      <ion-tab-button tab="whoweare">
-        <ion-icon name="people-circle-outline"></ion-icon>
-        <ion-label>Who We Are</ion-label>
-      </ion-tab-button>
         
       <ion-tab-button tab="ourschedule">
         <ion-icon name="calendar"></ion-icon>
         <ion-label>Our Schedule</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="whoweare">
+        <ion-icon name="people-circle-outline"></ion-icon>
+        <ion-label>Who We Are</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>

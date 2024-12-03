@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Add Proposal</ion-title>
+    <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header> 
+        <ion-card-title class="ion-text-center">Insert New Proposal</ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Team</ion-label>
+          <ion-select [(ngModel)]="idteam" interface="popover">
+            <ion-select-option *ngFor="let team of teams" [value]="team.idteam">
+              {{ team.name }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>        
+        <ion-item> 
+          <ion-input [(ngModel)]="description" label="Description" labelPlacement="floating"/> 
+        </ion-item>
+      </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>

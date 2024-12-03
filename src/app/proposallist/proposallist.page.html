@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Apply Team</ion-title>
+    <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card *ngFor="let proposal of proposals">
+      <ion-card-header>
+        <img alt="Silhouette of mountains" src="{{proposal.url}}"/>
+        <ion-card-title>
+          <ion-label>{{proposal.team}} - {{proposal.game}}</ion-label>
+        </ion-card-title>
+        <ion-card-subtitle>Status : {{proposal.status}}</ion-card-subtitle>
+        <ion-card-subtitle>{{proposal.description}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" routerLink="/addproposal">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
