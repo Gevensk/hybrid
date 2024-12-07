@@ -37,8 +37,22 @@ export class ScheduleserviceService {
     return this.http.post(this.link + "register_member.php", urlEncodedData, { headers });
   }
 
+  addProposal(idmember: string, idteam: number, description: string): Observable<any>{
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    const body = new URLSearchParams();
+    body.set('idmember', idmember.toString());
+    body.set('idteam', idteam.toString());
+    body.set('description', description);
+    const urlEncodedData = body.toString();
+    return this.http.post(this.link + "add_proposal.php", urlEncodedData, { headers });
+  }
+
   scheduleList(): Observable<any> {
     return this.http.get(this.link + "getschedule.php")
+  }
+
+  gameList(): Observable<any>{
+    return this.http.get(this.link + "getgame.php")
   }
 
   scheduleDetail(id: number): Observable<any> {

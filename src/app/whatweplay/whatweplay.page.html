@@ -10,15 +10,15 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <ion-card *ngFor="let game of games; let i = index" class="card1 ion-padding">
+    <ion-card *ngFor="let game of games;" class="card1 ion-padding">
       <ion-card-header>
         <img alt="Silhouette of mountains" src="{{game.url}}" />
         <ion-card-title>{{game.name}}</ion-card-title>
       </ion-card-header>
-      <ion-card-content>{{game.desc}}</ion-card-content>
-      <ion-button shape="round" expand="round" fill="clear" routerLink="/achievements/{{i}}"
+      <ion-card-content>{{game.description}}</ion-card-content>
+      <ion-button shape="round" expand="round" fill="clear"
         md="ellipsis-vertical">Achievement</ion-button>
-      <ion-button shape="round" expand="round" fill="clear" routerLink="/teams/{{i}}">Teams</ion-button>
+      <ion-button shape="round" expand="round" fill="clear">Teams</ion-button>
     </ion-card>
   </div>
 </ion-content>

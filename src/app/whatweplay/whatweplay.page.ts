@@ -23,7 +23,12 @@ export class WhatweplayPage implements OnInit {
     if (!this.username || !this.fullname) {
       this.router.navigate(['/login']);
     } else {
-      this.games = this.scheduleservice.games;
+      this.scheduleservice.gameList().subscribe(
+        (data) => {
+          console.log(data);
+          this.games = data
+        }
+      )
     }
   }
 }
