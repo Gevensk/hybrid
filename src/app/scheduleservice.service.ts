@@ -66,4 +66,16 @@ export class ScheduleserviceService {
   getAvailableTeam(idmember: string): Observable<any>{
     return this.http.get(this.link + "get_available_team.php?idmember=" + idmember)
   }
+
+  getTeamMembers(idteam: string): Observable<any>{
+    return this.http.get(this.link + "getmembers.php?idteam=" + idteam)
+  }
+
+  getTeam(idgame: string): Observable<any>{
+    return this.http.get(this.link + "getteam.php?idgame=" + idgame)
+  }
+
+  getAchievement(idgame: string, year: string): Observable<any> {
+    return this.http.get(this.link + "getachievements.php?idgame=" + idgame + "&year=" + year);
+  }  
 }

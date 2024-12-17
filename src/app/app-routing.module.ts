@@ -36,7 +36,7 @@ const routes: Routes = [
     loadChildren: () => import('./teams/teams.module').then(m => m.TeamsPageModule)
   },
   {
-    path: 'teamdetail/:index/:memberindex',
+    path: 'teamdetail/:index',
     loadChildren: () => import('./teamdetail/teamdetail.module').then( m => m.TeamdetailPageModule)
   },
   {
@@ -46,7 +46,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'proposallist',
     loadChildren: () => import('./proposallist/proposallist.module').then( m => m.ProposallistPageModule)
   },

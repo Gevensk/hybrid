@@ -1,26 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/teams/{{indexGame}}"></ion-back-button>
+      <ion-back-button defaultHref="/whatweplay"></ion-back-button>
     </ion-buttons>
     <ion-title>Team Members</ion-title>
+    <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <div>
-      <ion-img src="{{games[indexGame].url}}"></ion-img>
-      <ion-title class="ion-padding">{{games[indexGame].name}}</ion-title>
+    <div *ngIf="team">
+      <ion-img [src]="team.urlteam"></ion-img>
+      <ion-title class="ion-padding">{{team.teamname}}</ion-title>
     </div>
+
     <ion-card *ngFor="let member of team_members">
       <div class="card-content">
         <ion-avatar id="myAvatar" slot="start">
-          <ion-img src="{{member.url}}"></ion-img>
+          <ion-img [src]="member.url"></ion-img>
         </ion-avatar>
         <ion-card-content>
-          <h2>{{member.nickname}}</h2>
-          <p>{{member.role}}</p>
+          <h2>{{member.username}}</h2>
+          <p>{{member.description}}</p>
         </ion-card-content>
       </div>
     </ion-card>

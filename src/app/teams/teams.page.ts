@@ -9,15 +9,24 @@ import { ScheduleserviceService } from '../scheduleservice.service';
 })
 
 export class TeamsPage implements OnInit {
-  teams: any[] = []
+  game: any = {}; // Data game
+  teams: any[] = []; // Data tim
   index = 0
 
   constructor(private route: ActivatedRoute, private scheduleservice: ScheduleserviceService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.teams = this.scheduleservice.teams;
-      this.index = params['index'];
+      const idgame = params['index']; // Ambil ID game dari URL
+      this.scheduleservice.getTeam(idgame).subscribe(
+        (response: any) => {
+          this.game = response.game; // Data game
+          this.teams = response.teams; // Data tim
+        },
+        (error) => {
+          console.error("Error fetching teams:", error);
+        }
+      );
     });
   }
 }

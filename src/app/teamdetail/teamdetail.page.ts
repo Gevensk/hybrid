@@ -8,27 +8,25 @@ import { ScheduleserviceService } from '../scheduleservice.service';
   styleUrls: ['./teamdetail.page.scss'],
 })
 export class TeamdetailPage implements OnInit {
-  indexGame = 0;
-  indexTeam = 0;
+  index = 0
   team_members: any[] = []
-  games: any[] = []
+  team: any = null;
 
   constructor(private route: ActivatedRoute, private scheduleservice: ScheduleserviceService) { }
 
   ngOnInit() {
-    // this.route.params.subscribe(params => {
-    //   const team_members = this.scheduleservice.team_members
-    //   this.games = this.scheduleservice.games
-    //   this.indexGame = params['index'];
-    //   this.indexTeam = params['memberindex'];
-
-    //   const selectedTeam = team_members.find(
-    //     team => team.idgame == this.indexGame && team.idteam == this.indexTeam
-    //   );
-
-    //   if (selectedTeam) {
-    //     this.team_members = selectedTeam.members;
-    //   }
-    // });
+    this.route.params.subscribe(params => {
+      const idteam = params['index'];
+      this.scheduleservice.getTeamMembers(idteam).subscribe(
+        (response: any) => {
+          // Proses data dari API
+          this.team = response.team;
+          this.team_members = response.members;
+        },
+        (error) => {
+          console.error('Error fetching team details:', error);
+        }
+      );
+    });
   }
 }

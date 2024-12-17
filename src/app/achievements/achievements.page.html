@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
-    <ion-buttons slot = "start">
-      <ion-back-button defaultHref = "/whatweplay"></ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/whatweplay"></ion-back-button>
     </ion-buttons>
     <ion-title>Achievements</ion-title>
     <ion-icon name="person-circle" size="large" class="ion-margin" slot="end"></ion-icon>
@@ -10,18 +10,23 @@
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <img alt="Silhouette of mountains" src="{{achievements[index].url}}" />
-    <ion-item class = "ion-padding">
-      <ion-select label="Year" label-placement="floating">
+    <img *ngIf="game?.urlgame" alt="Game Image" [src]="game.urlgame" />
+    <ion-title *ngIf="game?.gamename">{{game.gamename}}</ion-title>
+    <ion-item class="ion-padding">
+      <ion-select label="Year" label-placement="floating" [(ngModel)]="year" (ionChange)="onYearChange()">
+        <ion-select-option value="">All</ion-select-option>
+        <ion-select-option value="2022">2018</ion-select-option>
+        <ion-select-option value="2022">2019</ion-select-option>
+        <ion-select-option value="2022">2020</ion-select-option>
+        <ion-select-option value="2022">2021</ion-select-option>
         <ion-select-option value="2022">2022</ion-select-option>
         <ion-select-option value="2023">2023</ion-select-option>
         <ion-select-option value="2024">2024</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-title>{{achievements[index].game}}</ion-title>
-    <div class = "ion-padding">
-      <ion-text *ngFor="let ach of achievements[index].desc">
-        {{ach}}<br/>
+    <div class="ion-padding">
+      <ion-text *ngFor="let ach of achievements">
+        {{ach.name}} - {{ach.teamname}}<br />
       </ion-text>
     </div>
   </div>

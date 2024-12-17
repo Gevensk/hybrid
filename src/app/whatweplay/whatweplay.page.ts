@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./whatweplay.page.scss'],
 })
 export class WhatweplayPage implements OnInit {
-  games:any[] = []
+  games:any[] = [];
   username = ""
   fullname = ""
   idmember = ""
@@ -26,7 +26,7 @@ export class WhatweplayPage implements OnInit {
       this.scheduleservice.gameList().subscribe(
         (data) => {
           console.log(data);
-          this.games = data
+          this.games = data;
         }
       )
     }

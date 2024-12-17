@@ -9,13 +9,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- Tampilkan gambar game -->
   <div id="container">
-    <ion-img src="{{teams[index].url}}"></ion-img>
+    <ion-img *ngIf="game?.gameurl" [src]="game.gameurl"></ion-img>
   </div>
-  <ion-list *ngFor="let team of teams[index].name; let i = index">
-    <ion-item [routerLink]="['/teamdetail', index, i]">
+  <!-- Daftar tim -->
+  <ion-list>
+    <ion-item *ngFor="let team of teams" [routerLink]="['/teamdetail', team.idteam]">
       <ion-label>
-        {{team}}
+        {{team.name}}
       </ion-label>
     </ion-item>
   </ion-list>

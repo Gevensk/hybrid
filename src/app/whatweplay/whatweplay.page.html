@@ -17,8 +17,8 @@
       </ion-card-header>
       <ion-card-content>{{game.description}}</ion-card-content>
       <ion-button shape="round" expand="round" fill="clear"
-        md="ellipsis-vertical">Achievement</ion-button>
-      <ion-button shape="round" expand="round" fill="clear">Teams</ion-button>
+        md="ellipsis-vertical" routerLink="/achievements/{{game.idgame}}">Achievement</ion-button>
+      <ion-button shape="round" expand="round" fill="clear" routerLink="/teams/{{game.idgame}}">Teams</ion-button>
     </ion-card>
   </div>
 </ion-content>
