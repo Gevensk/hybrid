@@ -77,5 +77,21 @@ export class ScheduleserviceService {
 
   getAchievement(idgame: string, year: string): Observable<any> {
     return this.http.get(this.link + "getachievements.php?idgame=" + idgame + "&year=" + year);
+  }
+
+  getLikes(idmember: string): Observable<any> {
+    return this.http.get(this.link + `getlikes.php?idmember=${idmember}`);
   }  
+
+  addLikes(idmember: string): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    const body = new URLSearchParams();
+    body.set('idmember', idmember);
+    const urlEncodedData = body.toString();
+    return this.http.post(this.link + "addlikes.php", urlEncodedData, { headers });
+  }
+
+  getProfile(idmember: string): Observable<any> {
+    return this.http.get(this.link + `getprofile.php?idmember=${idmember}`);
+  }
 }

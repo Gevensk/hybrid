@@ -77,3 +77,22 @@ ion-text {
   font-weight: bold;
   color: white;
 }
+
+ion-button.not-liked {
+  --background: white;
+  --color: #fd0303;
+  --border: 2px solid #fd0303;
+}
+
+ion-button.liked {
+  --background: #fd0303;
+  --color: white;
+}
+
+ion-button.not-liked ion-text {
+  color: red;
+}
+
+ion-button.liked ion-text {
+  color: white;
+}

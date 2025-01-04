@@ -17,13 +17,7 @@ export class SignupPage implements OnInit {
   pwconfirm: string = "";
   checkButton: boolean = false;
 
-  constructor(private route:Router,private scheduleservice:ScheduleserviceService) {
-
-   }
-
-   
-
-   
+  constructor(private route:Router,private scheduleservice:ScheduleserviceService) {}
 
    register(){
     this.scheduleservice.register(this.fname,this.lname,this.username,this.password).subscribe((response: any) => {
@@ -39,11 +33,8 @@ export class SignupPage implements OnInit {
         }
       }
     })
-
    }
-
 
   ngOnInit() {
   }
-
 }

@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'addproposal',
     loadChildren: () => import('./addproposal/addproposal.module').then( m => m.AddproposalPageModule)
+  },  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
+
 
 
 

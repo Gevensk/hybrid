@@ -16,14 +16,14 @@
           alt="Gambar E-Sport" fill="clear"></ion-img>
       </ion-item>
 
-      <ion-item lines="none" fill="clear"> 
+      <ion-item lines="none" fill="clear">
         <ion-label>
           <h1 class="title">E-Sport</h1>
         </ion-label>
       </ion-item>
 
       <ion-item lines="none" fill="clear">
-        <ion-text fill="clear"class="description">
+        <ion-text fill="clear" class="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae posuere arcu. Fusce convallis lectus id
           dictum egestas. Suspendisse potenti. Nam vestibulum pellentesque nulla in aliquet. Praesent eget arcu libero.
           Praesent imperdiet, diam sit amet pulvinar pharetra, tortor ante ullamcorper quam, eu porta sapien lorem in
@@ -34,11 +34,11 @@
       </ion-item>
 
       <ion-item lines="none">
-        <ion-button size="default" (click)="addLike()" shape="round" slot="end">
-          <ion-icon slot="start" name="thumbs-up-outline"></ion-icon>
-          <ion-text>{{like}}</ion-text>
+        <ion-button size="default" shape="round" slot="end" (click)="addLike()"
+          [ngClass]="{ 'liked': isLiked, 'not-liked': !isLiked }">
+          <ion-icon slot="start" [name]="isLiked ? 'thumbs-up' : 'thumbs-up-outline'"></ion-icon>
+          <ion-text>{{ like }}</ion-text>
         </ion-button>
-        
       </ion-item>
     </ion-list>
   </div>
