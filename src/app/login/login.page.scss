@@ -31,3 +31,10 @@ ion-item {
     padding: 10px 16px;
     
   }
+
+  .logo {
+    width: 150px; /* Atur lebar */
+    height: auto; /* Jaga rasio aspek */
+    margin: 0 auto; /* Center gambar jika diperlukan */
+    display: block; /* Agar properti margin bekerja */
+  }

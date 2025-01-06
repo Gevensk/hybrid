@@ -49,3 +49,9 @@ ion-icon {
   background-color: #000;
 }
 
+.logo {
+  width: 100px; /* Atur lebar */
+  height: auto; /* Jaga rasio aspek */
+  margin: 0 auto; /* Center gambar jika diperlukan */
+  display: block; /* Agar properti margin bekerja */
+}
