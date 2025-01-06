@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ScheduleserviceService } from '../scheduleservice.service';
 
 @Component({
@@ -12,15 +12,26 @@ export class AchievementsPage implements OnInit {
   game: any = null;
   index = 0
   year = ""
+  username = ""
+  fullname = ""
+  idmember = ""
 
-  constructor(private route: ActivatedRoute, private scheduleservice: ScheduleserviceService) { }
+  constructor(private route: ActivatedRoute, private scheduleservice: ScheduleserviceService, private router: Router) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      const idgame = params['index'];
-      console.log("idgame = " + idgame)
-      this.fetchAchievements(idgame, this.year);
-    });
+    this.username = localStorage.getItem('app_username') || '';
+    this.fullname = localStorage.getItem('app_fullname') || '';
+    this.idmember = localStorage.getItem("app_idmember") || '';
+
+    if (!this.username || !this.fullname) {
+      this.router.navigate(['/login']);
+    } else {
+      this.route.params.subscribe(params => {
+        const idgame = params['index'];
+        console.log("idgame = " + idgame)
+        this.fetchAchievements(idgame, this.year);
+      });
+    }
   }
   
   fetchAchievements(idgame: string, year: string) {

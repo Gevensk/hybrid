@@ -12,6 +12,8 @@ export class AddproposalPage implements OnInit {
   idteam = 0
   description = ""
   idmember: string | null = null;
+  username = ""
+  fullname = ""
 
   constructor(private scheduleservice: ScheduleserviceService, private router: Router) { }
 
@@ -19,22 +21,29 @@ export class AddproposalPage implements OnInit {
     this.idmember = localStorage.getItem("app_idmember");
     console.log("ID Member dari localStorage:", this.idmember);
 
-    if (this.idmember) {
-      this.scheduleservice.getAvailableTeam(this.idmember).subscribe(
-        (response: any) => {
-          console.log("Response dari API:", response);
-          if (response.result === 'OK' && Array.isArray(response.data)) {
-            this.teams = response.data;
-          } else {
-            console.error("Response tidak sesuai format:", response);
-          }
-        },
-        (error) => {
-          console.error("Error fetching proposals:", error);
-        }
-      );
+    this.username = localStorage.getItem('app_username') || '';
+    this.fullname = localStorage.getItem('app_fullname') || '';
+
+    if (!this.username || !this.fullname) {
+      this.router.navigate(['/login']);
     } else {
-      console.error("ID Member tidak ditemukan di localStorage.");
+      if (this.idmember) {
+        this.scheduleservice.getAvailableTeam(this.idmember).subscribe(
+          (response: any) => {
+            console.log("Response dari API:", response);
+            if (response.result === 'OK' && Array.isArray(response.data)) {
+              this.teams = response.data;
+            } else {
+              console.error("Response tidak sesuai format:", response);
+            }
+          },
+          (error) => {
+            console.error("Error fetching proposals:", error);
+          }
+        );
+      } else {
+        console.error("ID Member tidak ditemukan di localStorage.");
+      }
     }
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScheduleserviceService } from '../scheduleservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-whoweare',
@@ -9,27 +10,36 @@ import { ScheduleserviceService } from '../scheduleservice.service';
 export class WhowearePage implements OnInit {
   like = 0;
   idmember: string | null = null;
+  username = ""
+  fullname = ""
   isLiked = false;
 
-  constructor(private scheduleservice: ScheduleserviceService) {}
+  constructor(private scheduleservice: ScheduleserviceService, private router: Router) {}
 
   ngOnInit() {
     this.idmember = localStorage.getItem("app_idmember");
     console.log("ID Member dari localStorage:", this.idmember);
-  
-    if (this.idmember) {
-      this.scheduleservice.getLikes(this.idmember).subscribe(
-        (data) => {
-          console.log('Likes data:', data);
-          this.like = data.likes || 0;
-          this.isLiked = data.userLiked || false;
-        },
-        (error) => {
-          console.error('Error fetching likes:', error);
-        }
-      );
+
+    this.username = localStorage.getItem('app_username') || '';
+    this.fullname = localStorage.getItem('app_fullname') || '';
+
+    if (!this.username || !this.fullname) {
+      this.router.navigate(['/login']);
     } else {
-      console.error("ID Member tidak ditemukan di localStorage.");
+      if (this.idmember) {
+        this.scheduleservice.getLikes(this.idmember).subscribe(
+          (data) => {
+            console.log('Likes data:', data);
+            this.like = data.likes || 0;
+            this.isLiked = data.userLiked || false;
+          },
+          (error) => {
+            console.error('Error fetching likes:', error);
+          }
+        );
+      } else {
+        console.error("ID Member tidak ditemukan di localStorage.");
+      }
     }
   }  
 
